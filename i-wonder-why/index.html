@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Stories</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #ffffff;
+      border-bottom: 2px solid #f47b20;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      color: #f47b20;
+      font-size: 1.4rem;
+      margin: 0;
+    }
+    header a.logo {
+      text-decoration: none;
+    }
+    nav a {
+      color: #333;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #f47b20;
+    }
 
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      background: #f8f8f8;
+    }
+    .hero h2 {
+      color: #222;
+      font-family: Georgia, serif;
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      color: #555;
+    }
+    .hero .sub {
+      margin-top: 1.5rem;
+      color: #777;
+      font-size: 1rem;
+    }
+
+    .grid-wrap {
+      padding: 2.5rem 1rem 3rem;
+      background: #fff;
+    }
+    .cards {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 14px;
+      padding: 1.6rem 1.6rem 1.4rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+    .pill {
+      display: inline-block;
+      border: 1px solid rgba(244,123,32,0.45);
+      color: #f47b20;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      margin-bottom: 1.1rem;
+      background: rgba(244,123,32,0.06);
+    }
+    .card h3 {
+      margin: 0 0 0.6rem;
+      color: #f47b20;
+      font-family: Georgia, serif;
+      font-size: 2.05rem;
+      line-height: 1.15;
+    }
+    .card p {
+      margin: 0 0 1.3rem;
+      color: #555;
+      font-size: 1.02rem;
+      max-width: 40ch;
+    }
+    .card a {
+      color: #333;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .card a:hover {
+      color: #f47b20;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0;
+      background: #fafafa;
+    }
+    footer a {
+      color: #f47b20;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="./"><h1>Kultured Tech</h1></a>
+    <nav>
+      <a href="https://kulturedtech.co.nz">Shop</a>
+      <a href="https://kulturedtech.co.nz/pages/about">About</a>
+      <a href="https://kulturedtech.co.nz/pages/contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Our Stories</h2>
+    <p>This is a place to notice things together — without needing to arrive anywhere.</p>
+    <div class="sub">Five ways in. No rush. Start wherever feels natural.</div>
+  </section>
+
+  <section class="grid-wrap">
+    <div class="cards">
+
+      <div class="card">
+        <div class="pill">Future Tech</div>
+        <h3>Future Tech</h3>
+        <p>Practical reflections on what’s coming — and what’s actually useful. Less hype, more clarity.</p>
+        <a href="future-tech/">Explore Future Tech →</a>
+      </div>
+
+      <div class="card">
+        <div class="pill">I Wonder Why?</div>
+        <h3>I Wonder Why?</h3>
+        <p>Questions that won’t leave us alone — patterns, behaviour, and the quiet mechanics underneath life.</p>
+        <a href="i-wonder-why/">Explore I Wonder Why? →</a>
+      </div>
+
+      <div class="card">
+        <div class="pill">Travels</div>
+        <h3>Travels</h3>
+        <p>Places, movement, and what changes when you step into a different rhythm for a while.</p>
+        <a href="travels/">Explore Travels →</a>
+      </div>
+
+      <div class="card">
+        <div class="pill">Product Tests &amp; Reviews</div>
+        <h3>Product Tests &amp; Reviews</h3>
+        <p>What we tested, what held up, what didn’t — and why we choose to stock (or avoid) certain tools.</p>
+        <a href="product-tests-reviews/">Explore Tests &amp; Reviews →</a>
+      </div>
+
+      <div class="card">
+        <div class="pill">Stories</div>
+        <h3>Stories</h3>
+        <p>Real moments and lived experience — the human thread running through everything else.</p>
+        <a href="stories/">Explore Stories →</a>
+      </div>
+
+      <div class="card">
+        <div class="pill">Recently Added</div>
+        <h3>Recently Added</h3>
+        <p>New pieces as they’re written — added quietly, without schedule or announcement.</p>
+        <a href="recently-added/">Explore recent additions →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Kultured Tech &amp; LED NZ. All rights reserved. |
+      <a href="https://kulturedtech.co.nz">Back to Main Site</a>
+    </p>
+  </footer>
+</body>
+</html>
