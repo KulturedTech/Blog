@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kultured Tech — Our Stories</title>
 
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      color: #333;
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      border-bottom: 2px solid #f47b20;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #f47b20;
+      font-size: 1.4rem;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      color: #666;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      text-align: left;
+    }
+
+    .card {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #f47b20;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Kultured Tech</h1>
+    <nav>
+      <a href="/stories/">Our Stories</a>
+      <a href="https://kulturedtech.co.nz">Shop</a>
+      <a href="https://kulturedtech.co.nz/pages/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Our Stories</h2>
+    <p class="subtitle">
+      This is a place to notice things together — without needing to arrive anywhere.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Future Tech</h3>
+        <a href="/future-tech/">Explore →</a>
+      </div>
+
+      <div class="card">
+        <h3>I Wonder Why?</h3>
+        <a href="/i-wonder-why/">Explore →</a>
+      </div>
+
+      <div class="card">
+        <h3>Travels</h3>
+        <a href="/travels/">Explore →</a>
+      </div>
+
+      <div class="card">
+        <h3>Product Tests & Reviews</h3>
+        <a href="/product-tests-reviews/">Explore →</a>
+      </div>
+
+      <div class="card">
+        <h3>Recently Added</h3>
+        <a href="/recently-added/">Explore →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Kultured Tech & LED NZ
+  </footer>
+</body>
+</html>
