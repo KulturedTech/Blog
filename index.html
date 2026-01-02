@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Stories</title>
+  <title>Kultured Tech — Stories</title>
   <style>
     body {
       font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -12,6 +12,7 @@
       margin: 0;
       line-height: 1.6;
     }
+
     header {
       background: #ffffff;
       border-bottom: 2px solid #f47b20;
@@ -23,75 +24,41 @@
       top: 0;
       z-index: 100;
     }
+
     header h1 {
       color: #f47b20;
       font-size: 1.4rem;
       margin: 0;
     }
+
     nav a {
       color: #333;
       margin-left: 1.5rem;
       text-decoration: none;
       font-weight: 500;
     }
+
     nav a:hover {
       color: #f47b20;
     }
 
     .hero {
       text-align: center;
-      padding: 4rem 1rem 3rem;
-      background: #f8f8f8;
-    }
-    .hero h2 {
-      color: #222;
-      font-family: Georgia, serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      max-width: 720px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      color: #555;
-    }
-
-    /* Intro / About section (text-first, no image) */
-    .featured {
+      padding: 2.5rem 1rem 1.25rem;
+      background: #fff;
       max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-    .featured h3 {
-      color: #f47b20;
-      font-family: Georgia, serif;
-      font-size: 1.5rem;
-      margin: 0 0 0.75rem 0;
-    }
-    .featured p {
-      color: #444;
-      font-size: 1rem;
-      margin: 0 0 0.9rem 0;
+      margin: 0 auto;
     }
 
-    /* Categories section (re-uses your card look) */
-    .categories {
-      background: #fafafa;
-      padding: 3rem 1rem;
-    }
-    .categories h3 {
-      text-align: center;
-      font-family: Georgia, serif;
-      font-size: 1.6rem;
-      margin-bottom: 0.75rem;
-      color: #222;
-    }
-    .categories .subhead {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 2rem auto;
+    .hero p {
+      margin: 0.75rem auto 0;
+      font-size: 1.05rem;
       color: #666;
-      font-size: 1rem;
+    }
+
+    .grid-wrap {
+      background: #fff;
+      padding: 1.25rem 1rem 2.5rem;
     }
 
     .posts {
@@ -108,49 +75,53 @@
       border-radius: 12px;
       overflow: hidden;
       transition: transform 0.2s ease;
+      padding: 1.25rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      min-height: 220px;
     }
+
     .post:hover {
       transform: translateY(-4px);
     }
 
-    /* Make whole card clickable */
-    .post a {
-      display: block;
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .post .tag {
+    .pill {
       display: inline-block;
-      margin: 1.25rem 1.5rem 0 1.5rem;
-      padding: 0.25rem 0.6rem;
-      border: 1px solid #f0d2bd;
-      border-radius: 999px;
       font-size: 0.85rem;
-      color: #8a4b1f;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid #f7c19a;
+      border-radius: 999px;
+      color: #b85a16;
       background: #fff;
+      margin-bottom: 0.9rem;
+      align-self: flex-start;
     }
 
-    .post-content {
-      padding: 0.75rem 1.5rem 1.5rem;
-    }
     .post-content h4 {
-      margin: 0.5rem 0 0.6rem 0;
+      margin: 0.25rem 0 0.6rem;
       color: #f47b20;
       font-family: Georgia, serif;
-      font-size: 1.15rem;
-    }
-    .post-content p {
-      color: #555;
-      font-size: 0.95rem;
-      margin: 0 0 0.9rem 0;
+      font-size: 1.45rem;
+      line-height: 1.15;
     }
 
-    .post-content .cta {
+    .post-content p {
+      color: #555;
+      font-size: 0.98rem;
+      margin: 0 0 1.1rem;
+    }
+
+    .cta {
+      margin-top: auto;
       font-weight: 600;
       color: #333;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
     }
-    .post:hover .post-content .cta {
+
+    .cta:hover {
       color: #f47b20;
     }
 
@@ -160,13 +131,16 @@
       border-top: 1px solid #ddd;
       font-size: 0.9rem;
       color: #666;
-      margin-top: 3rem;
+      margin-top: 0;
+      background: #fff;
     }
+
     footer a {
       color: #f47b20;
       text-decoration: none;
       font-weight: 500;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
@@ -183,81 +157,79 @@
   </header>
 
   <section class="hero">
-    <h2>Our Stories</h2>
-    <p>This is a place to notice things together — without needing to arrive anywhere.</p>
+    <p>Five ways in. No rush. Start wherever feels natural.</p>
   </section>
 
-  <section class="featured">
-    <h3>About These Stories</h3>
-    <p>This is a quiet space for observations, experiences, and things noticed along the way. Kultured Tech continues to evolve through work, travel, conversations, and curiosity — and what’s shared here comes from that movement: moments that felt worth pausing with.</p>
-    <p>Nothing here is written to persuade, convert, or correct anyone. There’s no right order to read this, and no expectation to agree. If something resonates, that’s enough.</p>
-  </section>
-
-  <section class="categories">
-    <h3>Browse by Category</h3>
-    <p class="subhead">Five ways in. No rush. Start wherever feels natural.</p>
-
+  <section class="grid-wrap">
     <div class="posts">
+
+      <!-- 1) Future Tech -->
       <div class="post">
-        <a href="/future-tech/">
-          <span class="tag">Future Tech</span>
-          <div class="post-content">
-            <h4>Future Tech</h4>
-            <p>Practical reflections on what’s coming — and what’s actually useful. Less hype, more clarity.</p>
-            <div class="cta">Explore Future Tech →</div>
-          </div>
-        </a>
+        <span class="pill">Future Tech</span>
+        <div class="post-content">
+          <h4>Future Tech</h4>
+          <p>Practical reflections on what’s coming — and what’s actually useful. Less hype, more clarity.</p>
+        </div>
+        <a class="cta" href="future-tech.html">Explore Future Tech →</a>
       </div>
 
+      <!-- 2) I Wonder Why? -->
       <div class="post">
-        <a href="/i-wonder-why/">
-          <span class="tag">I Wonder Why?</span>
-          <div class="post-content">
-            <h4>I Wonder Why?</h4>
-            <p>Questions that won’t leave us alone — patterns, behaviour, and the quiet mechanics underneath life.</p>
-            <div class="cta">Explore I Wonder Why? →</div>
-          </div>
-        </a>
+        <span class="pill">I Wonder Why?</span>
+        <div class="post-content">
+          <h4>I Wonder Why?</h4>
+          <p>Questions that won’t leave us alone — patterns, behaviour, and the quiet mechanics underneath life.</p>
+        </div>
+        <a class="cta" href="i-wonder-why.html">Explore I Wonder Why? →</a>
       </div>
 
+      <!-- 3) Travels -->
       <div class="post">
-        <a href="/travels/">
-          <span class="tag">Travels</span>
-          <div class="post-content">
-            <h4>Travels</h4>
-            <p>Places, movement, and what changes when you step into a different rhythm for a while.</p>
-            <div class="cta">Explore Travels →</div>
-          </div>
-        </a>
+        <span class="pill">Travels</span>
+        <div class="post-content">
+          <h4>Travels</h4>
+          <p>Places, movement, and what changes when you step into a different rhythm for a while.</p>
+        </div>
+        <a class="cta" href="travels.html">Explore Travels →</a>
       </div>
 
+      <!-- 4) Product Tests & Reviews -->
       <div class="post">
-        <a href="/product-tests-reviews/">
-          <span class="tag">Product Tests & Reviews</span>
-          <div class="post-content">
-            <h4>Product Tests & Reviews</h4>
-            <p>What we tested, what held up, what didn’t — and why we choose to stock (or avoid) certain tools.</p>
-            <div class="cta">Explore Tests & Reviews →</div>
-          </div>
-        </a>
+        <span class="pill">Product Tests &amp; Reviews</span>
+        <div class="post-content">
+          <h4>Product Tests &amp; Reviews</h4>
+          <p>What we tested, what held up, what didn’t — and why we choose to stock (or avoid) certain tools.</p>
+        </div>
+        <a class="cta" href="product-tests-reviews.html">Explore Tests &amp; Reviews →</a>
       </div>
 
+      <!-- 5) Stories -->
       <div class="post">
-        <a href="/stories/">
-          <span class="tag">Stories</span>
-          <div class="post-content">
-            <h4>Stories</h4>
-            <p>Real moments and lived experience — the human thread running through everything else.</p>
-            <div class="cta">Explore Stories →</div>
-          </div>
-        </a>
+        <span class="pill">Stories</span>
+        <div class="post-content">
+          <h4>Stories</h4>
+          <p>Real moments and lived experience — the human thread running through everything else.</p>
+        </div>
+        <a class="cta" href="stories.html">Explore Stories →</a>
       </div>
+
+      <!-- 6) Recently Added -->
+      <div class="post">
+        <span class="pill">Recently Added</span>
+        <div class="post-content">
+          <h4>Recently Added</h4>
+          <p>New pieces as they’re written — added quietly, without schedule or announcement.</p>
+        </div>
+        <a class="cta" href="recent.html">Explore recent additions →</a>
+      </div>
+
     </div>
   </section>
 
   <footer>
     <p>&copy; 2026 Kultured Tech & LED NZ. All rights reserved. |
-    <a href="https://kulturedtech.co.nz">Back to Main Site</a></p>
+      <a href="https://kulturedtech.co.nz">Back to Main Site</a>
+    </p>
   </footer>
 </body>
 </html>
