@@ -37,6 +37,7 @@
     nav a:hover {
       color: #f47b20;
     }
+
     .hero {
       text-align: center;
       padding: 4rem 1rem 3rem;
@@ -49,48 +50,50 @@
       margin-bottom: 1rem;
     }
     .hero p {
-      max-width: 600px;
+      max-width: 720px;
       margin: 0 auto;
       font-size: 1.1rem;
       color: #555;
     }
+
+    /* Intro / About section (text-first, no image) */
     .featured {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 2rem;
       max-width: 1000px;
       margin: 3rem auto;
       padding: 0 1rem;
-    }
-    .featured img {
-      width: 100%;
-      border-radius: 12px;
-      background-color: #eee;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
     }
     .featured h3 {
       color: #f47b20;
       font-family: Georgia, serif;
       font-size: 1.5rem;
-      margin-top: 0;
+      margin: 0 0 0.75rem 0;
     }
     .featured p {
       color: #444;
       font-size: 1rem;
+      margin: 0 0 0.9rem 0;
     }
-    .recent {
+
+    /* Categories section (re-uses your card look) */
+    .categories {
       background: #fafafa;
       padding: 3rem 1rem;
     }
-    .recent h3 {
+    .categories h3 {
       text-align: center;
       font-family: Georgia, serif;
       font-size: 1.6rem;
-      margin-bottom: 2rem;
+      margin-bottom: 0.75rem;
       color: #222;
     }
+    .categories .subhead {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 2rem auto;
+      color: #666;
+      font-size: 1rem;
+    }
+
     .posts {
       display: grid;
       gap: 2rem;
@@ -98,6 +101,7 @@
       max-width: 1000px;
       margin: 0 auto;
     }
+
     .post {
       background: #fff;
       border: 1px solid #eee;
@@ -108,24 +112,48 @@
     .post:hover {
       transform: translateY(-4px);
     }
-    .post img {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background-color: #eee;
-      object-fit: cover;
+
+    /* Make whole card clickable */
+    .post a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
     }
+
+    .post .tag {
+      display: inline-block;
+      margin: 1.25rem 1.5rem 0 1.5rem;
+      padding: 0.25rem 0.6rem;
+      border: 1px solid #f0d2bd;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: #8a4b1f;
+      background: #fff;
+    }
+
     .post-content {
-      padding: 1rem 1.5rem 1.5rem;
+      padding: 0.75rem 1.5rem 1.5rem;
     }
     .post-content h4 {
-      margin: 0.5rem 0;
+      margin: 0.5rem 0 0.6rem 0;
       color: #f47b20;
       font-family: Georgia, serif;
+      font-size: 1.15rem;
     }
     .post-content p {
       color: #555;
       font-size: 0.95rem;
+      margin: 0 0 0.9rem 0;
     }
+
+    .post-content .cta {
+      font-weight: 600;
+      color: #333;
+    }
+    .post:hover .post-content .cta {
+      color: #f47b20;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -141,12 +169,6 @@
     }
     footer a:hover {
       text-decoration: underline;
-    }
-    @media (max-width: 768px) {
-      .featured {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
     }
   </style>
 </head>
@@ -166,43 +188,75 @@
   </section>
 
   <section class="featured">
-    <img src="https://via.placeholder.com/800x450.png?text=Featured+Article+Image" alt="Featured Article Image" />
-    <div>
-      <h3>About These Stories</h3>
-      <p>This is a quiet space for observations, experiences, and things noticed along the way. Kultured Tech continues to evolve through work, travel, conversations, and curiosity — and what’s shared here comes from that movement: moments that felt worth pausing with.</p>
-      <p>Nothing here is written to persuade, convert, or correct anyone. There’s no right order to read this, and no expectation to agree. If something resonates, that’s enough.</p>
-    </div>
+    <h3>About These Stories</h3>
+    <p>This is a quiet space for observations, experiences, and things noticed along the way. Kultured Tech continues to evolve through work, travel, conversations, and curiosity — and what’s shared here comes from that movement: moments that felt worth pausing with.</p>
+    <p>Nothing here is written to persuade, convert, or correct anyone. There’s no right order to read this, and no expectation to agree. If something resonates, that’s enough.</p>
   </section>
 
-  <section class="recent">
-    <h3>Recent Posts</h3>
+  <section class="categories">
+    <h3>Browse by Category</h3>
+    <p class="subhead">Five ways in. No rush. Start wherever feels natural.</p>
+
     <div class="posts">
       <div class="post">
-        <img src="https://via.placeholder.com/600x350.png?text=Post+1" alt="Post 1" />
-        <div class="post-content">
-          <h4>How to Choose the Right LED Setup for Your Room</h4>
-          <p>Learn how brightness, warmth, and beam angles affect comfort and mood — plus our top product picks for each space.</p>
-        </div>
+        <a href="/future-tech/">
+          <span class="tag">Future Tech</span>
+          <div class="post-content">
+            <h4>Future Tech</h4>
+            <p>Practical reflections on what’s coming — and what’s actually useful. Less hype, more clarity.</p>
+            <div class="cta">Explore Future Tech →</div>
+          </div>
+        </a>
       </div>
+
       <div class="post">
-        <img src="https://via.placeholder.com/600x350.png?text=Post+2" alt="Post 2" />
-        <div class="post-content">
-          <h4>Smart Lighting Trends to Watch in 2025</h4>
-          <p>From voice-activated dimming to adaptive ambient light, here’s what’s shaping the next generation of home lighting.</p>
-        </div>
+        <a href="/i-wonder-why/">
+          <span class="tag">I Wonder Why?</span>
+          <div class="post-content">
+            <h4>I Wonder Why?</h4>
+            <p>Questions that won’t leave us alone — patterns, behaviour, and the quiet mechanics underneath life.</p>
+            <div class="cta">Explore I Wonder Why? →</div>
+          </div>
+        </a>
       </div>
+
       <div class="post">
-        <img src="https://via.placeholder.com/600x350.png?text=Post+3" alt="Post 3" />
-        <div class="post-content">
-          <h4>Energy Savings: The Real Numbers Behind LED Efficiency</h4>
-          <p>We break down how much energy (and money) you can save by switching to high-efficiency LEDs in 2025.</p>
-        </div>
+        <a href="/travels/">
+          <span class="tag">Travels</span>
+          <div class="post-content">
+            <h4>Travels</h4>
+            <p>Places, movement, and what changes when you step into a different rhythm for a while.</p>
+            <div class="cta">Explore Travels →</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="post">
+        <a href="/product-tests-reviews/">
+          <span class="tag">Product Tests & Reviews</span>
+          <div class="post-content">
+            <h4>Product Tests & Reviews</h4>
+            <p>What we tested, what held up, what didn’t — and why we choose to stock (or avoid) certain tools.</p>
+            <div class="cta">Explore Tests & Reviews →</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="post">
+        <a href="/stories/">
+          <span class="tag">Stories</span>
+          <div class="post-content">
+            <h4>Stories</h4>
+            <p>Real moments and lived experience — the human thread running through everything else.</p>
+            <div class="cta">Explore Stories →</div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Kultured Tech & LED NZ. All rights reserved. |
+    <p>&copy; 2026 Kultured Tech & LED NZ. All rights reserved. |
     <a href="https://kulturedtech.co.nz">Back to Main Site</a></p>
   </footer>
 </body>
