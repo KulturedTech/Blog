@@ -40,7 +40,7 @@
     }
 
     main {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: 4rem auto;
       padding: 0 2rem;
       text-align: center;
@@ -62,12 +62,56 @@
       margin: 0 0 3rem 0;
     }
 
-    .grid {
+    /* --- Card layout: 2 centred on top, 3 across on bottom --- */
+    .grid-two {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(2, minmax(280px, 360px));
+      justify-content: center;
       gap: 2rem;
       text-align: left;
       margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid-three {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(280px, 1fr));
+      gap: 2rem;
+      text-align: left;
+    }
+
+    /* Responsive: stack nicely */
+    @media (max-width: 980px) {
+      .grid-three {
+        grid-template-columns: repeat(2, minmax(280px, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      header {
+        padding: 1rem 1.2rem;
+      }
+
+      nav a {
+        margin-left: 1rem;
+      }
+
+      main {
+        margin: 3rem auto;
+        padding: 0 1.2rem;
+      }
+
+      h2 {
+        font-size: 2.3rem;
+      }
+
+      .grid-two {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-three {
+        grid-template-columns: 1fr;
+      }
     }
 
     .card {
@@ -95,7 +139,7 @@
 
     .card h3 {
       margin: 0 0 0.6rem 0;
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       color: #f47b20;
       line-height: 1.1;
     }
@@ -136,8 +180,25 @@
     <p class="subtitle">This is a place to notice things together — without needing to arrive anywhere.</p>
     <p class="subtle">Five ways in. No rush. Start wherever feels natural.</p>
 
-    <div class="grid">
+    <!-- Top row (2 centred) -->
+    <div class="grid-two">
+      <div class="card">
+        <div class="pill">Stories</div>
+        <h3>Stories</h3>
+        <p>Human moments, small turning points, and the bits of life that quietly shape who we become.</p>
+        <a href="/stories/">Explore Stories →</a>
+      </div>
 
+      <div class="card">
+        <div class="pill">Product Tests</div>
+        <h3>Product Tests & Reviews</h3>
+        <p>Real-world testing, honest notes, and what’s actually worth having in your home kit.</p>
+        <a href="/product-tests-reviews/">Explore Reviews →</a>
+      </div>
+    </div>
+
+    <!-- Bottom row (3 across) -->
+    <div class="grid-three">
       <div class="card">
         <div class="pill">Future Tech</div>
         <h3>Future Tech</h3>
@@ -158,21 +219,6 @@
         <p>Places, movement, and what changes when you step into a different rhythm for a while.</p>
         <a href="/travels/">Explore Travels →</a>
       </div>
-
-      <div class="card">
-        <div class="pill">Product Tests</div>
-        <h3>Product Tests & Reviews</h3>
-        <p>Real-world testing, honest notes, and what’s actually worth having in your home kit.</p>
-        <a href="/product-tests-reviews/">Explore Reviews →</a>
-      </div>
-
-      <div class="card">
-        <div class="pill">Recently Added</div>
-        <h3>Recently Added</h3>
-        <p>New pieces as they’re written — added quietly, without schedule or announcement.</p>
-        <a href="/recently-added/">Explore Recently Added →</a>
-      </div>
-
     </div>
   </main>
 
